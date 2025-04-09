@@ -32,22 +32,48 @@ HTML, CSS
 Font Awesome Icons
 
 📁 Project Structure:
-
-pgsql
-Copy
-Edit
+E_Library/
 E_Library/
 │
-├── index.php                → Student book booking form
-├── book_now.php             → Logic to insert booking
-├── admin_ui.php             → Admin dashboard
-├── approve_booking.php      → Approve (status update)
-├── reject_booking.php       → Reject (delete booking)
-├── view_booking.php         → Detailed view (optional)
-├── /db/library.sql          → MySQL database export
-├── /css/style.css           → Optional custom styling
-├── /assets/logo.png         → Logo or images
-├── README.txt               → This file
+├── 📁 imagesbooks/                 # Folder containing book images
+│   └── bg.index.png               # Background image
+│
+├── 📄 admin_ui.php                # Admin dashboard displaying all bookings
+├── 📄 approve.php                 # Deletes booking when approved (acts as approval)
+├── 📄 reject.php                  # Deletes booking when rejected
+├── 📄 admin_ui.css                # Styling for admin panel
+│
+├── 📄 Sdashboard.php              # Student dashboard UI
+├── 📄 Slogin.php                  # Student login page
+├── 📄 Ssignup.php                 # Student signup/registration page
+│
+├── 📄 Adashboard.php              # Admin login redirection dashboard
+├── 📄 Alogin.php                  # Admin login page
+│
+├── 📄 booklist.php                # Page displaying all books
+├── 📄 handle_req.php              # Handles booking requests
+├── 📄 index.php                   # Homepage
+│
+├── 📄 about.php                   # About the Library page
+├── 📄 about.css                   # Styling for about page
+│
+├── 📄 premium.php                 # Premium features/info (optional)
+├── 📄 premium.css                 # Styling for premium page
+│
+├── 📄 report.php                  # Admin reports (optional analytics)
+├── 📄 report.css                  # Styling for report page
+│
+├── 📄 student_ui.php              # UI for student to see own bookings
+├── 📄 student_ui.css              # Styling for student UI
+│
+├── 📄 style.css                   # Main CSS styling (global)
+├── 📄 script.js                   # JavaScript file (if any dynamic functionality)
+│
+├── 📄 d_b.php                     # Database connection file
+│
+├── 📄 README.md                   # Project description (Markdown)
+└── 📄 README.txt                  # Optional README (plain text)
+
 📌 How to Run the Project:
 
 Clone or download this repository.
