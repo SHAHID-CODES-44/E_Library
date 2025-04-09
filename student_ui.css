@@ -1,0 +1,88 @@
+.library-header {
+    background: linear-gradient(to right, #0066cc, #3399ff);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 3px solid #004c99;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.library-container {
+    margin-top: 30px;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: #004080;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d1e0ff;
+    padding-bottom: 5px;
+}
+
+.book-card {
+    border: 1px solid #cce0ff;
+    border-radius: 15px;
+    padding: 20px;
+    background: #f4f9ff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.15);
+}
+
+.book-details h3 {
+    font-size: 1.25rem;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.book-author {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.book-meta {
+    font-size: 0.85rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.book-btn {
+    background-color: #0066cc;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+    background-color: #004c99;
+}
+
+.filter-options .btn {
+    margin: 5px;
+}
+
+.alert-message {
+    padding: 10px 20px;
+    margin-top: 15px;
+}
+
+.library-footer {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    background-color: #f0f0f0;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #ccc;
+}

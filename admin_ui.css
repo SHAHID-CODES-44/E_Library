@@ -1,0 +1,112 @@
+/* styles.css */
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #858796;
+    --success-color: #1cc88a;
+    --info-color: #36b9cc;
+    --warning-color: #f6c23e;
+    --danger-color: #e74a3b;
+    --light-color: #f8f9fc;
+    --dark-color: #5a5c69;
+}
+
+body {
+    background-color: #f8f9fc;
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #224abe 100%);
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: white !important;
+}
+
+.navbar .form-control {
+    padding: 0.75rem 1rem;
+    border-width: 0;
+    border-radius: 0.35rem;
+}
+
+.sidebar {
+    background: #fff;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    min-height: calc(100vh - 56px);
+}
+
+.sidebar .nav-item .nav-link {
+    padding: 1rem;
+    color: var(--dark-color);
+}
+
+.sidebar .nav-item .nav-link i {
+    margin-right: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.sidebar .nav-item.active .nav-link {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.sidebar .nav-item.active .nav-link i {
+    color: var(--primary-color);
+}
+
+.card {
+    border: none;
+    border-radius: 0.35rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+    padding: 1rem 1.35rem;
+    font-weight: 700;
+}
+
+.booking-card {
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+.booking-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1.5rem 0 rgba(58, 59, 69, 0.2);
+}
+
+.status-pending { color: var(--warning-color); font-weight: 700; }
+.status-approved { color: var(--success-color); font-weight: 700; }
+.status-rejected { color: var(--danger-color); font-weight: 700; }
+
+.search-box {
+    position: relative;
+}
+
+.search-box .form-control {
+    padding-left: 2.5rem;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+}
+
+.page-title {
+    font-weight: 700;
+    color: var(--dark-color);
+}

@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 40px;
+}
+
+.report-container {
+    background: #fff;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.report-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.report-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.report-container input[type="text"],
+.report-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.report-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.report-container button:hover {
+    background-color: #218838;
+}

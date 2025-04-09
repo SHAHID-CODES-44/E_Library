@@ -1,0 +1,316 @@
+/* ===== Base Styles ===== */
+:root {
+    --primary: #2563eb;       /* Vibrant blue */
+    --primary-dark: #1e40af;
+    --secondary: #4f46e5;     /* Purple */
+    --accent: #10b981;        /* Emerald green */
+    --dark: #1e293b;          /* Dark blue-gray */
+    --light: #f8fafc;         /* Off-white */
+    --gray: #64748b;          /* Medium gray */
+    --light-gray: #e2e8f0;    /* Light gray */
+    
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    
+    --rounded-sm: 0.25rem;
+    --rounded-md: 0.5rem;
+    --rounded-lg: 0.75rem;
+    --rounded-xl: 1rem;
+    --rounded-full: 9999px;
+    
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--light);
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+  
+  /* ===== Typography ===== */
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--dark);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+  }
+  
+  h3.section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  h3.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: var(--rounded-full);
+  }
+  
+  h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+  }
+  
+  p {
+    margin-bottom: 1rem;
+    color: var(--gray);
+  }
+  
+  /* ===== Header & Profile ===== */
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.5rem;
+    border-radius: var(--rounded-full);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .profile-img::before {
+    content: 'SF';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--rounded-full);
+    background: white;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+  
+  .social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    color: var(--primary-dark);
+  }
+  
+  /* ===== Sections ===== */
+  section {
+    background: white;
+    border-radius: var(--rounded-xl);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--light-gray);
+  }
+  
+  section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .animated-dots::after {
+    content: '...';
+    display: inline-block;
+    animation: dots 1.5s steps(5, end) infinite;
+    width: 0;
+    overflow: hidden;
+    vertical-align: bottom;
+  }
+  
+  @keyframes dots {
+    0% { width: 0; }
+    100% { width: 1.2em; }
+  }
+  
+  /* ===== Contact Section ===== */
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--light);
+    border-radius: var(--rounded-lg);
+    transition: var(--transition);
+  }
+  
+  .contact-item:hover {
+    background: var(--primary);
+    color: white;
+  }
+  
+  .contact-item:hover i,
+  .contact-item:hover a {
+    color: white;
+  }
+  
+  .contact-item i {
+    font-size: 1.25rem;
+    color: var(--primary);
+    min-width: 24px;
+  }
+  
+  .contact-item a {
+    color: var(--dark);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  /* ===== Skills Section ===== */
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .skill-category {
+    background: var(--light);
+    padding: 1.5rem;
+    border-radius: var(--rounded-lg);
+  }
+  
+  .skill {
+    margin-bottom: 1rem;
+  }
+  
+  .skill-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .skill-bar {
+    height: 8px;
+    background: var(--light-gray);
+    border-radius: var(--rounded-full);
+    overflow: hidden;
+  }
+  
+  .skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: var(--rounded-full);
+    width: 0;
+    transition: width 1.5s ease-out;
+  }
+  
+  /* ===== Footer ===== */
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--gray);
+    font-size: 0.9rem;
+  }
+  
+  /* ===== Animations ===== */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  section {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  section:nth-child(1) { animation-delay: 0.1s; }
+  section:nth-child(2) { animation-delay: 0.2s; }
+  section:nth-child(3) { animation-delay: 0.3s; }
+  section:nth-child(4) { animation-delay: 0.4s; }
+  
+  /* ===== Responsive Design ===== */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1.5rem 1rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    h2 {
+      font-size: 1.25rem;
+    }
+    
+    h3.section-title {
+      font-size: 1.5rem;
+    }
+    
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      font-size: 2.5rem;
+    }
+    
+    .contact-info {
+      grid-template-columns: 1fr;
+    }
+  }
